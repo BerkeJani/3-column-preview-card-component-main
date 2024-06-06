@@ -16,14 +16,16 @@ body {
     width: 100%;
     height: 100vh;
     background-color: var(--VeryLightGray);
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
 }
 
 .card-wrapper {
     width: 60%;
-    height: 50%;
+    height: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,30 +33,29 @@ body {
     font-family: "Lexend Deca";
 }
 
-.card{
+.card {
     padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.card-icon{
+.card-icon {
     width: 4rem;
 }
 
 .card-title {
     color: var(--VeryLightGray);
     font-family: "Big Shoulders Display";
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 0;
+    font-size: 3rem;
 }
 
 .card-description {
     color: var(--TransparentWhite);
-    font-size: .67rem;
+    font-size: 15px;
     line-height: 1.8;
-    margin-top: 0;
 }
 
 .card-button {
@@ -65,38 +66,63 @@ body {
     border: none;
 }
 
-.c-sedans{
+.c-sedans {
     background-color: var(--BrightOrange);
-    border-radius: 1rem 0 0 1rem ;
+    border-radius: .5rem 0 0 .5rem;
 }
 
-.c-suvs{
+.c-suvs {
     background-color: var(--DarkCyan);
 }
 
-.c-luxury{
+.c-luxury {
     background-color: var(--VeryDarkCyan);
-    border-radius: 0 1rem 1rem 0 ;
+    border-radius: 0 .5rem .5rem 0;
 }
 
-.orange-text{
+.orange-text {
     color: var(--BrightOrange);
 }
 
-.cyan-text{
+.cyan-text {
     color: var(--DarkCyan);
 }
 
-.very-dark-cyan-text{
+.very-dark-cyan-text {
     color: var(--VeryDarkCyan);
 }
 
 .attribution {
-    position: fixed;
-    bottom: 1rem;
+    position: absolute;
+    bottom: 0px;
     text-align: center;
     width: 100%;
+    height: 1.5rem;
     margin: auto;
     font-family: "Lexend Deca";
     color: var(--VeryDarkCyan);
+}
+
+@media only screen and (max-width:375px) {
+    body {
+        height: 100%;
+    }
+
+    .card-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 85%;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .c-sedans {
+        border-radius: .5rem .5rem 0 0;
+    }
+
+    .c-luxury {
+        border-radius: 0 0 .5rem .5rem;
+    }
+
 }
